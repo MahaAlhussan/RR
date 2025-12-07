@@ -33,7 +33,9 @@
         </ul>
       </div>
     </div>
+    
   </nav>
+  
 </template>
 
 <script setup>
@@ -113,16 +115,16 @@ nav {
 }
 
 nav.scrolled {
-  background: rgba(255, 255, 255, 0.222) !important;
-  backdrop-filter: blur(60px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.334) !important;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(70px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   padding: 15px 40px;
 }
 
 :root.dark nav.scrolled {
-  background: rgba(15, 23, 42, 0.488) !important;
+  background: rgba(15, 23, 42, 0.95) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -210,17 +212,36 @@ nav.scrolled {
   font-family: "Noto Sans Arabic", sans-serif;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   nav {
-    padding: 20px 15px;
+  background: rgba(255, 255, 255, 0.64) !important;
+  backdrop-filter: blur(70px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+  }
+  
+  :root.dark nav {
+    background: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
   
   nav.scrolled {
-    padding: 12px 15px;
+    padding: 12px 20px;
   }
 
   .navbar-collapse {
-    text-align: center;
+   
+    padding: 20px;
+ 
+  }
+  
+  :root.dark .navbar-collapse {
+    background: rgba(15, 23, 42, 0.95);
   }
 
   .navbar-nav.mx-auto {
@@ -229,20 +250,61 @@ nav.scrolled {
 
   .navbar-nav:last-child {
     margin-top: 10px;
+    justify-content: center;
   }
   
   .lang-btn {
     width: 35px;
     height: 35px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .nav-item {
+    text-align: center;
+  }
+  
+  .nav-link {
+    padding: 10px 0;
   }
 }
 
 @media (max-width: 576px) {
+  nav {
+    padding: 12px 15px !important;
+  }
+  
+  .logo {
+    padding: 8px 12px;
+    font-size: 18px;
+  }
+  
   .lang-btn {
     width: 32px;
     height: 32px;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .navbar-collapse {
+    padding: 15px;
+  }
+  
+  .contact-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  nav {
+    background: transparent !important;
+  }
+  
+  nav.scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
+  
+  :root.dark nav.scrolled {
+    background: rgba(15, 23, 42, 0.95) !important;
   }
 }
 </style>

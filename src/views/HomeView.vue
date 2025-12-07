@@ -283,15 +283,17 @@ export default {
   position: absolute;
   width: 8px;
   height: 8px;
+  
   border-radius: 50%;
-  animation: orbit linear infinite;
+
+  animation: planet linear infinite;
 }
 
 .dot-1 {
   background: #5475e3;
-  animation-duration: 15s;
+  animation-duration: 20s;
   top: -4px;
-  left: 50%;
+left: 50%;
   transform: translateX(-50%);
 }
 
@@ -301,7 +303,9 @@ export default {
   animation-direction: reverse;
   top: 50%;
   right: -4px;
+
   transform: translateY(-50%);
+
 }
 
 .dot-3 {
@@ -310,12 +314,16 @@ export default {
   bottom: -4px;
   left: 50%;
   transform: translateX(-50%);
+
 }
 
-@keyframes orbit {
+@keyframes planet {
+
   0% {
+
     transform: rotate(0deg) translateX(250px) rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg) translateX(250px) rotate(-360deg);
   }
@@ -509,20 +517,25 @@ export default {
   filter: brightness(0.8) contrast(1.2);
 }
 @media (max-width: 768px) {
+
   .hero-section {
+
     padding-top: 120px;
     height: 90vh;
   }
   
   .planet-container {
     width: 400px;
-    height: 400px;
+   height: 400px;
+
   }
   
   .hero-img img {
     max-width: 200px;
+
   }
   
+
   .ring-1 {
     width: 250px;
     height: 250px;
@@ -538,7 +551,7 @@ export default {
     height: 350px;
   }
   
-  @keyframes orbit {
+  @keyframes planet {
     0% {
       transform: rotate(0deg) translateX(125px) rotate(0deg);
     }
@@ -563,54 +576,9 @@ export default {
   .get-started-btn {
     padding: 10px 25px;
     font-size: 0.9rem;
+
   }
 }
 
-@media (max-width: 576px) {
-  .planet-container {
-    width: 300px;
-    height: 300px;
-  }
-  
-  .hero-img img {
-    max-width: 150px;
-  }
-  
-  .ring-1 {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .ring-2 {
-    width: 250px;
-    height: 250px;
-  }
-  
-  .ring-3 {
-    width: 300px;
-    height: 300px;
-  }
-  
-  @keyframes orbit {
-    0% {
-      transform: rotate(0deg) translateX(100px) rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg) translateX(100px) rotate(-360deg);
-    }
-  }
-  
-  .title {
-    font-size: 32px;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .get-started-btn {
-    width: 200px;
-  }
-}
+
 </style>
